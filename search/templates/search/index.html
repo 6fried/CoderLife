@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<div class="container">
+
+    <h2 class="my-3">
+        {% if request.GET.q is not null %}
+        {% if results %}
+            {% translate "Résultats de la recherche sur" %} "{{ request.GET.q }}"
+        {% else %}
+            {% translate "Pas de correspondance avec" %} "{{ request.GET.q }}"
+        {% endif %}
+        {% endif %}
+    </h2>
+
+    <div class="row">
+        <div class="col-md-8 mt-3 left">
+            {% for queryset in results %}
+                {% for data in queryset %}
+                <div class="card mb-4 art animate__animated animate__zoomIn">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ data.name }}</h2>
+                        <h2 class="card-title">{{ data.title }}</h2>
+                        <p class="card-text">{{data.description }}</p>
+                        <a href="{{data.get_absolute_url}}" class="btn btn-primary">{% translate "Voir Plus" %} &rarr;</a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% block content %}
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 mt-3 left">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h1 class="card-title">{{ project.name }}</h1>
+                    <p>
+                        <strong>Tags:</strong>
+                        {% for tag in project.tags.all %}
+                            <a href="{% url 'showcase:project_tag' tag.slug %}" class="link-light text-decoration-none badge bg-secondary">
+                                {{tag.name}}
+                            </a>
+                        {% endfor %}
+                    </p> <br>
+                        <img alt="{{ project.image.url }}" class="card-text text-muted h6" src="{{ project.image.url }}" title ="{{ project.name }}">
+                    <p class="card-text">
+                        {{project.detail|safe }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr />
+    {% if similar_projects %}
+    <div class="my-3">
+        <h3>{% Projets Similaires/h3>
+    </div>
+    <div class="row">
+        {% for project in similar_projects %}
+        <a href="{{project.get_absolute_url}}">
+            <div class="col-md-6 col-sm-6 col-lg-4 mb-3">
+                <div class="card border-0">
+                    <div class="ratio ratio-16x9">
+                        <img src="{{ project.image.url }}" class="rounded featured-image-list" alt="{{project.name}}">
+                    </div>
+                    <div class="card-body p-0 m-0 mt-2">
+                        <h2 class="card-title h6 my-0 py-0">
+                            {{project.name}}
+                        </h2>
+                        <p class="card-text">
+                            <small class="text-muted">
+                                    <strong>{{project.author}}</strong></span>
+                                <a href="" class="badge badge-light text-muted">{{project.tags.all|join:" "}}</a>
+                            </small>
+                        </p>
+                        <p>{{ project.description|linebreaks }}</p>
+                    </div>
+                </div>
+            </div>    
+        </a>
+        {% endfor %}
+        {% endif %}
+    </div>
+
+</div>
+{%endblock%}

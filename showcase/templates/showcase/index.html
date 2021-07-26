@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+
+<div class="container">
+
+    {% if tag %}
+        <h2 class="mb-3">Projects tagged with "{{ tag.name }}"</h2>
+    {% endif %}
+    <h2 class="my-3">
+        {% if request.GET.q is not null %}
+        {% if project_list %}
+            {% translate "Résultats de la recherche sur" %} "{{ request.GET.q }}"
+        {% else %}
+            {% translate "Pas de correspondance avec" %} "{{ request.GET.q }}"
+        {% endif %}
+        {% endif %}
+    </h2>
+
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            {% for project in projects_list %}
+            <div class="card mb-4 art animate__animated animate__zoomIn">
+                <div class="card-body">
+                    <h2 class="card-title">{{ project.name }}</h2>
+                    <img alt="{{ project.image.url }}" class="card-text text-muted h6" src="{{ project.image.url }}" title ="{{ project.name }}">
+                    <p class="card-text">{{project.description }}</p>
+                    <a href="{% url 'showcase:detail' project.slug %}" class="btn btn-primary">{% translate "Voir Plus" %} &rarr;</a>
+                </div>
+            </div>
+            {%empty%}
+            {% if request.GET.q is null and not project_list%}
+            <p id="self-introduction">
+                {% blocktranslate trimmed %}
+                    Rien ici pour l'instant. Mais vous pouvez toujours voir mes petits
+                    projets sur
+                {% endblocktranslate %}
+                <a class="about_link" href="https://github.com/6fried">GitHub</a>.
+            </p>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{%endblock%}
