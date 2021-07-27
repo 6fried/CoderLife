@@ -2,7 +2,7 @@
 {% load i18n %}
 {% block content %}
 {% load static %}
-<section id="about" class="about">
+<section id="about" class="about padding">
     <div class="container">
         <div class="section-title">
             <h2> {% translate "Plus d'infos sur moi" %} </h2>
@@ -69,18 +69,17 @@
         </div>
 
     </div>
-</section>
 
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
         <div class="container">
 
-            <div class="section-title">
+            <div class="section-title padding">
                 <h2> {% translate "Compétences" %} </h2>
             </div>
 
             <h3> {% translate "Outils et Frameworks" %}</h3>
-            <div class="container">
+            <div class="container padding">
                 <div class="row align-items-center">
                     <div class="box col col-md">
                         <div class="percent">
@@ -146,7 +145,7 @@
             </div>
             <br>
 
-            <div style="margin-top: 25px">
+            <div>
                 <h3> {% translate "Langages de Programation" %}</h3>
                 <div class="row skills-content">
                     <div class="col-lg-6">
@@ -196,7 +195,7 @@
     </section>
 
     <!-- End Skills Section -->
-    <section id="resume" class="resume">
+    <section id="resume" class="resume padding">
         <div class="container">
 
             <div class="section-title">
@@ -295,7 +294,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Portfolio</h2>
-                <p style="font-size: 14pt; text-align:justify">
+                <p style="font-size: 14pt; text-align:justify;">
                     {% blocktranslate trimmed %}
                         Au cours de mes péripéties en tant que programmeur et développeur, 
                         j'ai eu à réaliser plusieurs projets, achevés ou non, qui m'ont 
@@ -306,4 +305,5 @@
             </div>
         </div>
     </section>
+</section>
 {%endblock%}
