@@ -1,7 +1,7 @@
 from django.db import models
 from taggit.managers import TaggableManager
 
-class Showcase(models.Model):
+class Project(models.Model):
     name = models.CharField(max_length=80)
     slug = models.SlugField(max_length=100)
     description = models.TextField(blank=True)

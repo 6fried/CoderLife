@@ -13,15 +13,25 @@ html{
     font-size:larger;
 }
 
+.padding{
+    padding: 8px 0px 8px 0px;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
     font-size:medium ;
+
 }
 
+.post{
+    text-align: justify;
+    text-justify: inter-word;
+}
 #self-introduction {
     /* color: aliceblue; */
     font-family: 'lcd';
-    font-size: 3em;
+    font-size: xx-large;
+    line-height: 1.75;    
 }
 
 .card {
@@ -81,7 +91,7 @@ nav ul li{
 }
 
 nav a{
-    display: block;
+    display: inline-block;
     padding: 0 10px;
     /* color: #fff; */
     font-size: 1.05em;
@@ -576,15 +586,18 @@ article img{
     padding: 0
 }
 
-#footer {
+footer {
+    position: relative;
+    bottom: 0%;
+    width: 100%;
     background: #f7f8f9;
     color: #45505b;
     font-size: 14px;
     text-align: center;
-    padding: 30px 0
+    padding-top: 8px
 }
 
-#footer h3 {
+footer h3 {
     font-size: 36px;
     font-weight: 700;
     position: relative;
@@ -593,18 +606,18 @@ article img{
     margin: 0 0 15px 0
 }
 
-#footer p {
+footer p {
     font-size: 15;
     font-style: italic;
     padding: 0;
     margin: 0 0 40px 0
 }
 
-#footer .social-links {
+footer .social-links {
     margin: 0 0 40px 0
 }
 
-#footer .social-links a {
+footer .social-links a {
     font-size: 18px;
     display: inline-block;
     background: #0563bb;
@@ -619,50 +632,12 @@ article img{
     transition: .3s
 }
 
-#footer .social-links a:hover {
+footer .social-links a:hover {
     background: #0678e3;
     color: #fff;
     text-decoration: none
 }
 
-#footer .copyright {
-    margin: 0 0 5px 0
-}
-
-#footer .credits {
+footer .credits {
     font-size: 13px
 }
-
-#hero .social-links {
-    margin-top: 30px;
-    padding-top: 30px
-}
-
-#hero .social-links a {
-    font-size: 27px;
-    display: inline-block;
-    color: #45505b;
-    line-height: 1;
-    margin-right: 20px;
-    transition: .3s
-}
-
-#hero .social-links a:hover {
-    color: #0563bb
-}
-
-@media (max-width:992px) {
-    #hero {
-        text-align: center
-    }
-    #hero h1 {
-        font-size: 32px;
-        line-height: 36px
-    }
-    #hero p {
-        margin-top: 10px;
-        font-size: 20px;
-        line-height: 24px
-    }
-}
-

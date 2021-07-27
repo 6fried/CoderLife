@@ -7,21 +7,12 @@
     {% if tag %}
     <h2 class="mb-3">{% translate "Articles signés" %} "{{ tag.name }}"</h2>
     {% endif %}
-    <h2 class="my-3">
-        {% if request.GET.q is not null %}
-        {% if post_list %}
-            {% translate "Résultats de la recherche sur" %} "{{ request.GET.q }}"
-        {% else %}
-            {% translate "Pas de correspondance avec" %} "{{ request.GET.q }}"
-        {% endif %}
-        {% endif %}
-    </h2>
 
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8 mt-3 left">
             {% for post in post_list %}
-            <div class="card mb-4 art animate__animated animate__zoomIn">
+            <div class="card row mb-4 art animate__animated animate__zoomIn">
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
                     <p class="card-text text-muted h6"> By {{ post.author }} | {{post.pub_date}} </p>
@@ -31,14 +22,12 @@
             </div>
 
             {%empty%}
-            {% if request.GET.q is null and not post_list %}
             <p id="self-introduction">
                 {% blocktranslate trimmed %}
                   Aucun article disponible pour l'instant. 
                   Merci de patienter. Il y en aura bientôt.
                 {% endblocktranslate %}
             </p>
-            {% endif %}
             {% endfor %}
         </div>
     </div>
