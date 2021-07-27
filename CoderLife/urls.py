@@ -39,6 +39,5 @@ urlpatterns += i18n_patterns(
     path('ckeditor/',include('ckeditor_uploader.urls')),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('showcases/', include('showcase.urls')),
-    path('search/', include('search.urls')),
     prefix_default_language=False
     )
