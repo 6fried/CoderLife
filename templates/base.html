@@ -10,7 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/boot.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/fonts.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/media-query.css' %}">
-		<link rel="stylesheet" type="text/css" href="{% static 'css/boxicons/css/boxicons.css' %}">
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 		<link rel="stylesheet" href="{% static 'css/highlight.css' %}">
@@ -25,7 +24,7 @@
 			<div class="row align-items-center"  style="margin-right: 16px;">
 				<div class="animate__animated animate__bounceIn"  id="title"><a href="{% url 'index' %}"><h1>CoderLife</h1></a></div>
 				<div class="row arrow search-form align-items-center">
-					<form class="d-flex" action=" ">
+					<form class="d-flex" action="{% if request.path == '/showcases/' %}  {% url 'showcase:index' %} {% else %} {% url 'blog:index' %} {% endif %} ">
 						<input id="s-field" class=" form-control-sm" type="search" value="{{request.GET.q}}" name="q" placeholder="Search" aria-label="Search" style='display: none;'>
 					</form>
 					<button class="btn btn-outline-primary" onclick="searchBarShow()"><img src="{% static 'img/icon_search.svg' %}" alt="search"></button>
@@ -34,6 +33,19 @@
 		</header>
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
+			<form class="d-flex " action="{% url 'set_language' %}" method="post">
+				{% csrf_token %}
+				<input name="next" type="hidden" value="{% if request.get_full_path|slice:':3' == '/en'%}{{request.get_full_path|slice:'3:'}}{% else %}{{request.get_full_path}}{% endif %}"/>
+				{% if request.get_full_path|slice:':3' == '/en'%}
+					<input name="language" type="hidden" value="fr" />
+					<input type="submit" value="FR" />
+				{% else %}
+					<input name="language" type="hidden" value="en" />
+					<input type="submit" value="EN" />		
+				{% endif %}
+			</form>
+	
+
 			<button class="btn nav-btn btn-outline-primary" onclick="showMenu(this)"> 
 				<div class="bar1"></div>
 				<div class="bar2"></div>
@@ -65,34 +77,27 @@
 
 			</ul>
         </nav>
-
-		<article>
+		<article>	  
 			{% block content %}
 			<!-- Content Goes here -->
 			{% endblock content %}	
 		</article>	
 
-		<footer>
-			<div style="font-size: large;">
-				<h6>Languages</h6>
-				<a href="{{request.get_full_path|slice:'3:'}}">Français</a> |
-				<a href="/en{{request.get_full_path}}">English</a>
-			</div>
-			<div class="py-3 bg-grey d-flex flex-column text-center">
-				<span class="container">
-					<span class="social-links">
-						<a href="https://github.com/6fried" target="_blank" class="github"><em class="bx bxl-github" title=" {% translate "Me suivre sur" %} Github"></em></a>
-						<a href="https://twitter.com/HantanKelly" target="_blank" class="twitter"><em class="bx bxl-twitter" title="{% translate "Me suivre sur" %} Twitter"></em></a>
-						<a href="https://linkedin.com/in/kelly-hantan-b471881b8" target="_blank" class="linkedin"><em class="bx bxl-linkedin" title="{% translate "Me suivre sur" %} LinkedIn"></em></a>
-						<!-- <a href="" target="_blank" class="facebook"><em class="bx bxl-facebook" title="Follow me Facebook"></em></a> -->
-						<a href="https://discord.com/users/630700824158404609" target="_blank" class="discord"><em class="bx bxl-discord" title="{% translate "Me joindre sur" %} Discord"></em></a>
-						<a href="https://t.me/Sixfried" target="_blank" class="telegram"><em class="bx bxl-telegram" title="{% translate "Me joindre sur" %} Telegram"></em></a>
-						<a href="https://wa.me/22994428200" target="_blank" class="whatsapp"><em class="bx bxl-whatsapp" title="{% translate "Me joindre sur" %} Whatsapp"></em></a>
-						<a href="mailto:kellyhantan@gmail.com" class="mail" title="{% translate "Envoyer un mail" %}"><em class="bx bx-mail-send"></em></a>
-					</span>
+		<footer id="hero" class="py-3 bg-grey d-flex flex-column text-center">
+			<p class="text-center" style="font-size: 2em;">Copyright &copy; Selecta</p>
+			<span class="container">
+				<span class="social-links">
+					<a href="https://github.com/6fried" target="_blank" class="github"><em class="bx bxl-github" title=" {% translate "Me suivre sur" %} Github"></em></a>
+					<a href="https://twitter.com/HantanKelly" target="_blank" class="twitter"><em class="bx bxl-twitter" title="{% translate "Me suivre sur" %} Twitter"></em></a>
+					<a href="https://linkedin.com/in/kelly-hantan-b471881b8" target="_blank" class="linkedin"><em class="bx bxl-linkedin" title="{% translate "Me suivre sur" %} LinkedIn"></em></a>
+					<!-- <a href="" target="_blank" class="facebook"><em class="bx bxl-facebook" title="Follow me Facebook"></em></a> -->
+					<a href="https://discord.com/users/630700824158404609" target="_blank" class="discord"><em class="bx bxl-discord" title="{% translate "Me joindre sur" %} Discord"></em></a>
+					<a href="https://t.me/Sixfried" target="_blank" class="telegram"><em class="bx bxl-telegram" title="{% translate "Me joindre sur" %} Telegram"></em></a>
+					<a href="https://wa.me/22994428200" target="_blank" class="whatsapp"><em class="bx bxl-whatsapp" title="{% translate "Me joindre sur" %} Whatsapp"></em></a>
+					<a href="mailto:kellyhantan@gmail.com" class="mail" title="{% translate "Envoyer un mail" %}"><em class="bx bx-mail-send"></em></a>
 				</span>
-				<p class="text-center copyright" style="font-size: 1.5em;">Copyright &copy; Selecta</p>
-			</div> 
+			</span>
 		</footer>
+
 	</body>
 </html>
