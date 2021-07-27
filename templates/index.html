@@ -1,0 +1,22 @@
+{% extends "base.html" %} 
+{% load i18n %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            <p id="self-introduction">
+                {% blocktranslate trimmed %}
+                    CoderLife, mes aventures dans le code.
+                    Je m'appelle HANTAN Sèdégbé Kelly, officiellement 
+                    étudiant en Physique-Chimie. Mais officieusement, 
+                    je deviens un globe-trotteur passionné par les 
+                    Sciences, les jeux vidéos et tout ce qui a un trait
+                    avec la programation. Plus d'infos sur moi
+                {% endblocktranslate %}
+                <a class="about_link" href="{% url 'about' %}">{% translate "ici" %}</a> 
+            </p>
+        </div>
+    </div>
+</div>
+{%endblock%}
