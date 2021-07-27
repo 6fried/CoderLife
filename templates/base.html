@@ -24,7 +24,7 @@
 			<div class="row align-items-center"  style="margin-right: 16px;">
 				<div class="animate__animated animate__bounceIn"  id="title"><a href="{% url 'index' %}"><h1>CoderLife</h1></a></div>
 				<div class="row arrow search-form align-items-center">
-					<form class="d-flex" action="{% if request.path == '/showcases/' %}  {% url 'showcase:index' %} {% else %} {% url 'blog:index' %} {% endif %} ">
+					<form class="d-flex" action="{% url 'search:index' %} ">
 						<input id="s-field" class=" form-control-sm" type="search" value="{{request.GET.q}}" name="q" placeholder="Search" aria-label="Search" style='display: none;'>
 					</form>
 					<button class="btn btn-outline-primary" onclick="searchBarShow()"><img src="{% static 'img/icon_search.svg' %}" alt="search"></button>
