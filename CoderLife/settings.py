@@ -26,7 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='UI|\nI,V\r,V]xk|6J]c:lYwm?')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if os.environ.get('ENV') == 'PRODUCTION':
+    DEBUG = False
+else:
+    DEBUG = True
     
 ALLOWED_HOSTS = ['coderlife-test.herokuapp.com', '127.0.0.1', 'localhost']
 
@@ -48,7 +51,6 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'showcase',
-    'search',
 ]
 
 MIDDLEWARE = [
@@ -236,5 +238,4 @@ CKEDITOR_CONFIGS = {
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-if os.environ.get('ENV') == 'PRODUCTION':
-    django_heroku.settings(locals())
+# django_heroku.settings(locals())
