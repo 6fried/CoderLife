@@ -33,18 +33,6 @@
 		</header>
 
 		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
-			<form class="d-flex " action="{% url 'set_language' %}" method="post">
-				{% csrf_token %}
-				<input name="next" type="hidden" value="{% if request.get_full_path|slice:':3' == '/en'%}{{request.get_full_path|slice:'3:'}}{% else %}{{request.get_full_path}}{% endif %}"/>
-				{% if request.get_full_path|slice:':3' == '/en'%}
-					<input name="language" type="hidden" value="fr" />
-					<input type="submit" value="FR" />
-				{% else %}
-					<input name="language" type="hidden" value="en" />
-					<input type="submit" value="EN" />		
-				{% endif %}
-			</form>
-	
 
 			<button class="btn nav-btn btn-outline-primary" onclick="showMenu(this)"> 
 				<div class="bar1"></div>
