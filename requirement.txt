@@ -1,0 +1,10 @@
+dj-database-url
+Django
+django-ckeditor
+django-heroku
+django-highlightjs
+django-js-asset
+django-taggit
+gunicorn
+psycopg2
+whitenoise

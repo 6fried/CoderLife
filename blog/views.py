@@ -2,11 +2,15 @@ from django.shortcuts import get_list_or_404, get_object_or_404, render, redirec
 from .models import Post, Comment
 from .forms import CommentForm
 from taggit.models import Tag
-from django.db.models import Count
+from django.db.models import Q, Count
 
 
 def index(request, tag_slug=None):
     posts = Post.objects.filter(status='published')
+    
+    query = request.GET.get("q")
+    if query:
+        posts=Post.objects.filter(Q(title__icontains=query) | Q(tags__name__icontains=query), status='published').distinct()
 
     tag = None
     if tag_slug:
@@ -42,7 +46,6 @@ def reply_page(request, slug, comment_id):
         
         if form.is_valid():
             post_url = request.POST.get('post_url')
-
             post=get_object_or_404(Post, slug=slug)
             parent = get_object_or_404(Comment, id=comment_id)
 
@@ -53,5 +56,4 @@ def reply_page(request, slug, comment_id):
             reply.save()
             
             return redirect(post_url + '#' + str(reply.id))
-
-    return redirect(request.POST.get('post_url'))
+    return redirect(" / ")
