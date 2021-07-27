@@ -1,6 +1,7 @@
 {% extends "base.html" %} 
 {% block content %}
- 
+{% load i18n %} 
+
 <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
@@ -18,14 +19,16 @@
                             <!-- {% if not forloop.last %}, {% endif %} -->
                         {% endfor %}
                     </p> <br>
-                        <img alt="{{ post.post_img.url }}" class="card-text text-muted h6" src="../../../{{ post.post_img.url }}" title ="{{ post.title }}">
+                        <img alt="{{ post.post_img.url }}" class="card-text text-muted h6" src="../../..{{ post.post_img.url }}" title ="{{ post.title }}">
                     <p class="card-text">
+                    <div class="post">
                         {{post.content|safe }}
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- comment place -->
 
     {% with comments.count as total_comments %}
@@ -46,7 +49,7 @@
     {% endif %}
 
     <hr/>
-    <h3>{% translate "Ajouter un commentaire"}</h3>
+    <h3>{% translate "Ajouter un commentaire" %}</h3>
     <form method="post" action="">
         {% csrf_token %}
         {{ comment_form.as_p }}
