@@ -26,9 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', default='UI|\nI,V\r,V]xk|6J]c:lYwm?')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-    
-ALLOWED_HOSTS = ['coderlife-test.herokuapp.com', '127.0.0.1', 'localhost']
+if os.environ.get('ENV') == 'PRODUCTION':
+    DEBUG = False
+else:
+    DEBUG = True
+
+ALLOWED_HOSTS = ['sixcode.herokuapp.com', '127.0.0.1', 'localhost']
 
 SITE_ID = 1
 
@@ -62,6 +65,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
+
 ROOT_URLCONF = 'CoderLife.urls'
 
 TEMPLATES = [

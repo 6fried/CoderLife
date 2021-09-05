@@ -63,7 +63,7 @@ body {
     width: auto;
 }
 
-#title a, title a:visited, title a:hover, title:focus{
+#title a, #title a:visited, #title a:hover, #title:focus{
     color: black;
     text-decoration:none;
     
