@@ -27,6 +27,7 @@ function searchBarShow() {
 
 function showMenu(btn) {
     const nav_bar = document.querySelector(`.navbar-nav`)
+    const nav_btn = document.querySelector(`.nav-btn`)
     if (nav_bar) {
         btn.classList.toggle('change');
         if (nav_bar.style.display == 'inline-block'){
@@ -35,7 +36,7 @@ function showMenu(btn) {
         }
         else {
             nav_bar.style.display = 'inline-block';
-            nav_btn.src = "icon_search.svg";
+            nav_btn.src = "../img/icon_search.svg";
         }
     }
 }
