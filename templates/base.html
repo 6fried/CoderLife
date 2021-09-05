@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	{% load static %}
 	{% load i18n %}
 
@@ -10,16 +10,28 @@
 		<meta name="description" content="My coder life. Let's learn game and web dev togheter with Godot Engine and Django. Made by Kelly Hantan.">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+		<meta name="language" content="english">
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+		<!-- Keywords -->
+		<meta content="code kelly hantan godot godotengine gdscript script python django" name="keywords">
+
 		<!-- Google validation -->
 		<meta name="google-site-verification" content="7ooKxrBKBWf_DFC6XEmznladc9_aRW9IoZR26vcmEl0" />
 
 		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website">
-		<meta property="og:url" content="https://coderlife-test.herokuapp.com/">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="SixCode">		
 		<meta property="og:title" content="SixCode">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://sixcode.herokuapp.com/">
 		<meta property="og:description" content="My coder life. Let's learn game and web dev togheter with Godot Engine and Django">
 		<meta property="og:image" itemprop="image" content="{% static 'img/favicons/android-chrome-512x512.png' %}">
+		<meta property="og:image:secure_url" itemprop="image" content="{% static 'img/favicons/android-chrome-512x512.png' %}">
+		<meta property="og:image:width" content="512">
+		<meta property="og:image:height" content="512">
+		<meta property="og:image:alt" content="SixCode">
+		<meta property="og:image:type" content="image/png">
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image">
@@ -41,7 +53,7 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'css/media-query.min.css' %}">
 		<link rel="stylesheet" type="text/css" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
-		<link rel="stylesheet" href="{% static 'css/highlight.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/highlight.min.css' %}">
 		<script src="{% static 'js/highlight.js' %}"></script>
 		<script src="{% static 'js/main.js'%}"></script>
 		<script>hljs.initHighlightingOnLoad();</script>
