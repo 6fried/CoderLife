@@ -24,10 +24,11 @@ from . import views
 
 
 sitemaps = {
-    'posts': PostSitemap,
+    'post': PostSitemap,
 }
 
 urlpatterns = [
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps, 'template_name': 'sitemap.html'}, name='django.contrib.sitemaps.views.sitemap'),
     path('i18n/', include('django.conf.urls.i18n')),
     ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
@@ -37,7 +38,6 @@ urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
     path('ckeditor/',include('ckeditor_uploader.urls')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('showcases/', include('showcase.urls')),
     path('search/', include('search.urls')),
     prefix_default_language=False
