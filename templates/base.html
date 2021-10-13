@@ -116,8 +116,13 @@
 		<footer>
 			<div style="font-size: large;">
 				<h6>Languages</h6>
-				<a href="{{request.get_full_path|slice:'3:'}}">Français</a> |
-				<a href="/en{{request.get_full_path}}">English</a>
+				{%if request.LANGUAGE_CODE == 'en' %}
+					<a href="{{request.get_full_path|slice:'3:'}}">Français</a> |
+					<a href="{{request.get_full_path}}">English</a>
+				{% else %}
+					<a href="{{request.get_full_path}}">Français</a> |
+					<a href="/en{{request.get_full_path}}">English</a>
+				{%endif%}
 			</div>
 			<div class="py-3 bg-grey d-flex flex-column text-center">
 				<span class="container">
