@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', default='UI|\nI,V\r,V]xk|6J]c:lYwm?')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if os.environ.get('ENV') == 'PRODUCTION':
-    DEBUG = True
+    DEBUG = False
 else:
     DEBUG = True
 

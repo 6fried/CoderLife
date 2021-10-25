@@ -311,9 +311,12 @@
                         Au cours de mes péripéties en tant que programmeur et développeur, 
                         j'ai eu à réaliser plusieurs projets, achevés ou non, qui m'ont 
                         permis de me perfectionner. Vous trouverez l'intégralité de ces 
-                        projets dans l'onglet <a href="/showcases/">Vitrine</a>.
-                        Visitez-la pour pour en savoir plus.
-                    {% endblocktranslate %}
+                        projets dans l'onglet 
+                    {% endblocktranslate %}    
+
+                        <a href="{% url 'showcase:index' %}"> {% translate "Vitrine"} </a>.
+                        {% translate "Visitez-la pour pour en savoir plus." %}
+
                 </p>
             </div>
         </div>

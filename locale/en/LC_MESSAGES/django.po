@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-24 00:49+0100\n"
+"POT-Creation-Date: 2021-10-25 12:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -142,8 +142,8 @@ msgid ""
 "En ce qui concerne mes atouts personnels, j'apprends et m'adapte très vite, "
 "et je travaille aussi bien seul qu'en équipe."
 msgstr ""
-"Concerning my personal strengths, I am a quick learner and "
-"adaptable, and I work both alone and in a team."
+"Concerning my personal strengths, I am a quick learner and adaptable, and I "
+"work both alone and in a team."
 
 #: .\templates\about.html:79
 msgid "Compétences"
@@ -248,8 +248,8 @@ msgid ""
 "Résolution de problèmes diverses avec l'aide de scripts improvisés et "
 "adaptés aux situations."
 msgstr ""
-"Solving various problems with the help of improvised scripts"
-"adapted to any situation."
+"Solving various problems with the help of improvised scriptsadapted to any "
+"situation."
 
 #: .\templates\about.html:285
 msgid "Développement de jeux vidéo"
@@ -265,8 +265,8 @@ msgid ""
 "Quelques prototypes et clones de jeux connus (spécialement ceux d'Atari) en "
 "vue de maitriser les concepts du développement."
 msgstr ""
-"Prototypes and clones of known games (especially Atari's)"
-"in order to master the concepts of development."
+"Prototypes and clones of known games (especially Atari's)in order to master "
+"the concepts of development."
 
 #: .\templates\about.html:295
 #, fuzzy
@@ -281,17 +281,25 @@ msgid ""
 msgstr ""
 "Ability to create any type of 2D game or application with Godot Engine."
 
-#: .\templates\about.html:311
+#: .\templates\about.html:310
+#, fuzzy
+#| msgid ""
+#| "Au cours de mes péripéties en tant que programmeur et développeur, j'ai "
+#| "eu à réaliser plusieurs projets, achevés ou non, qui m'ont permis de me "
+#| "perfectionner. Vous trouverez l'intégralité de ces projets dans l'onglet "
+#| "<a href=/showcases/>Vitrine</a>. Visitez-la pour pour en savoir plus."
 msgid ""
 "Au cours de mes péripéties en tant que programmeur et développeur, j'ai eu à "
 "réaliser plusieurs projets, achevés ou non, qui m'ont permis de me "
-"perfectionner. Vous trouverez l'intégralité de ces projets dans l'onglet <a "
-"href=/showcases/>Vitrine</a>. Visitez-la pour pour en savoir plus."
+"perfectionner. Vous trouverez l'intégralité de ces projets dans l'onglet"
 msgstr ""
-"During my adventures as a programmer and developer, I had to "
-"realize several projects, completed or not, which allowed me to "
-"improve myself. You will find the entirety of these projects in the <a "
-"href=/showcases/>show</a> tab . Visit it to learn more."
+"During my adventures as a programmer and developer, I had to realize several "
+"projects, completed or not, which allowed me to improve myself. You will "
+"find the entirety of these projects in the  "
+
+#: .\templates\about.html:318
+msgid "Visitez-la pour pour en savoir plus."
+msgstr "tab . Visit it to learn more."
 
 #: .\templates\base.html:86
 msgid "Accueil"
@@ -306,7 +314,9 @@ msgid "A Propos"
 msgstr "About Me"
 
 #: .\templates\base.html:119
-msgid "Langues"
+#, fuzzy
+#| msgid "Langues"
+msgid "Languages"
 msgstr "Languages"
 
 #: .\templates\base.html:131 .\templates\base.html:132
@@ -330,10 +340,10 @@ msgid ""
 "un globe-trotteur passionné par les Sciences, les jeux vidéos et tout ce qui "
 "a un trait avec la programation. Plus d'infos sur moi"
 msgstr ""
-"SixCode, my adventures in code. My name is HANTAN Sèdégbé Kelly, "
-"officially a student in Physics and Chemistry. But unofficially, I am becoming "
-"a globetrotter with a passion for Science, video games and everything that "
-"has something to do with programming. More about me"
+"SixCode, my adventures in code. My name is HANTAN Sèdégbé Kelly, officially "
+"a student in Physics and Chemistry. But unofficially, I am becoming a "
+"globetrotter with a passion for Science, video games and everything that has "
+"something to do with programming. More about me"
 
 #: .\templates\index.html:17
 msgid "ici"
