@@ -9,12 +9,21 @@ class Post(models.Model):
         ('draft', 'Draft'), 
         ('published', 'Published'),
     )
-    title = models.CharField(max_length=200)
+    
+    fr_title = models.CharField(max_length=200)
+    en_title = models.CharField(max_length=200)
+    
     slug = models.SlugField(max_length=250, unique_for_date='pub_date')
     author = models.CharField(max_length=80)
+    
     # description = models.TextField(max_length=250, blank=True)
-    description = models.TextField(blank=True)
-    content = RichTextUploadingField(null=True)
+    
+    fr_description = models.TextField(blank=True)
+    en_description = models.TextField(blank=True)
+    
+    fr_content = RichTextUploadingField(null=True)
+    en_content = RichTextUploadingField(null=True)
+    
     post_img = models.ImageField(upload_to='media', null=True)
     
     tags = TaggableManager()
@@ -35,7 +44,7 @@ class Post(models.Model):
         return Comment.objects.filter(post=self).filter(active=True)
 
     def __str__(self):
-        return self.title
+        return self.en_title
 
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE, related_name="comments")

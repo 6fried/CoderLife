@@ -2,13 +2,16 @@
 {% block content %}
 {% load i18n %} 
 
+{% get_current_language as LANGUAGE_CODE %}
+
+
 <div class="container">
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-9 mt-3 left">
             <div class="card mb-4">
                 <div class="card-body">
-                    <h1 class="card-title">{{ post.title }}</h1>
+                    <h1 class="card-title">{{ title }}</h1>
                     <p class="card-text text-muted h6">By {{ post.author }} | {{post.pub_date}}</p> <br>
                     <p>
                         <strong>Tags:</strong>
@@ -19,11 +22,10 @@
                             <!-- {% if not forloop.last %}, {% endif %} -->
                         {% endfor %}
                     </p> <br>
-                        <img alt="{{ post.post_img.url }}" class="card-text text-muted h6" src="../../..{{ post.post_img.url }}" title ="{{ post.title }}">
+                        <img alt="{{ post.post_img.url }}" class="card-text text-muted h6" src="../../..{{ post.post_img.url }}" title ="{{ title }}">
                     <p class="card-text">
                     <div class="post">
-                        {{post.content|safe }}
-
+                        {{ content|safe }}
                     </div>
                 </div>
             </div>

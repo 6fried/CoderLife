@@ -115,7 +115,7 @@
 
 		<footer>
 			<div style="font-size: large;">
-				<h6>Languages</h6>
+				<h6>{% translate "Languages" %}</h6>
 				{%if request.LANGUAGE_CODE == 'en' %}
 					<a href="{{request.get_full_path|slice:'3:'}}">Français</a> |
 					<a href="{{request.get_full_path}}">English</a>

@@ -241,13 +241,13 @@
                     <div class="col-lg-6">
                         <h3 class="resume-title"> {% translate "Expérience Personnelle" %}</h3>
                         <div class="resume-item">
-                            <h4>{% translate "Formation scolaire a la FAST"%}</h4>
+                            <h4>{% translate "Formation Académique à la FAST"%}</h4>
                             <h5> {% translate "Novembre 2020 - Maintenant" %} </h5>
                             <p><em>{% translate "Faculté des Sciences et Techniques |Université d'Abomey Calavi" %}, Benin.</em></p>
                             <ul>
-                                <li>{% translate "1ère année velidée en" %} 2020.</li>
+                                <li>{% translate "1ère année validée en" %} 2020.</li>
                                 <li> {% translate "2ème année en cours..." %} </li>
-                                <li> {% translate "En vue de me spécialiser en Physique Quantique avec des vues en cristallographie." %} </li>
+                                <li> {% translate "En vue de me spécialiser en Physique Quantique et en Astro-Physique" %} </li>
                             </ul>
                         </div>
                     </div>
@@ -258,8 +258,11 @@
                             <h5>{% translate "Mars 2020 (appris en un un mois)" %}</h5>
                             <br><br>
                             <ul>
-                                <li> {% translate "Bases, structures de données et programation système." %}</li>
-                                <li> {% translate "Reproduction de quelques fonctions système et écriture d'une bibliothèque personnalisée." %} <a href=""></a> </li>
+                                <li> {% blocktranslate trimmed %}
+                                    Bases, structures de données, reproduction de quelques fonctions système 
+                                    écriture d'une bibliothèque personnalisée.
+                                    {% endblocktranslate %}
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -273,7 +276,6 @@
                                 <li>Bytely | Url Shortener.<a class="external" href="https://github.com/6fried/Bytely-URL-shortener"></a></li>
                                 <li>SixCode.<a class="external" href="https://github.com/6fried/Bytely-URL-shortener"></a></li>
                                 <li>{% translate "Résolution de problèmes diverses avec l'aide de scripts improvisés et adaptés aux situations." %}</li>
-                                <li>{% translate "Apprentisage de la 3D dans le but d'en faire un Minecraft-like." %}</li>
                             </ul>
                         </div>
                     </div>
@@ -283,14 +285,15 @@
                             <h4>{% translate "Développement de jeux vidéo" %}</h4>
                             <h5>{% translate "Mars 2021 - Maintenant" %}</h5>
                             <ul>
-                                <li>{% blocktranslate trimmed %}
-                                    Quelques prototypes et clones de jeux connus 
-                                    (spécialement ceux d'Atari) en vue de maitriser 
-                                    les concepts du développement.</li>
+                                <li>
+                                    {% blocktranslate trimmed %}
+                                        Quelques prototypes et clones de jeux connus 
+                                        (spécialement ceux d'Atari) en vue de maitriser 
+                                        les concepts du développement.
                                     {%endblocktranslate%}
-                                <li>Racing2D, {% translate "premier jeu (officiel) (inachevé)" %}.</li>
+                                </li>
+                                <li>MarsLander, {% translate "premier jeu (officiel) (achevé)" %}. <a class="external" href="https://gotm.io/selecta/marslander" target="_blank"></a></li>
                                 <li>{% translate "Capacité à créer n'importe quel type de jeu ou application en 2D avec Godot Engine." %}</li>
-                                <li>{% translate "Prise en main de GdScript, langage de base du moteur." %}</li>
                             </ul>
                         </div>
                     </div>
@@ -308,7 +311,8 @@
                         Au cours de mes péripéties en tant que programmeur et développeur, 
                         j'ai eu à réaliser plusieurs projets, achevés ou non, qui m'ont 
                         permis de me perfectionner. Vous trouverez l'intégralité de ces 
-                        projets dans l'onglet <a href="">Vitrine</a>. Visitez-la pour pour en savoir plus.
+                        projets dans l'onglet <a href="/showcases/">Vitrine</a>.
+                        Visitez-la pour pour en savoir plus.
                     {% endblocktranslate %}
                 </p>
             </div>

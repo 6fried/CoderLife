@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-13 05:56+0100\n"
+"POT-Creation-Date: 2021-10-24 00:49+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,76 +18,78 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\CoderLife\settings.py:134
+#: .\CoderLife\settings.py:131
 msgid "Anglais"
 msgstr "English"
 
-#: .\CoderLife\settings.py:135
+#: .\CoderLife\settings.py:132
 msgid "Français"
 msgstr "French"
 
-#: .\blog\templates\blog\comment.html:20
+#: .\blog\templates\blog\comment.html:21
 msgid "Répondre"
 msgstr "Reply"
 
-#: .\blog\templates\blog\comment.html:34
+#: .\blog\templates\blog\comment.html:35
 msgid "Annuler"
 msgstr "Cancel"
 
-#: .\blog\templates\blog\comment.html:35
-#: .\blog\templates\blog\post_detail.html:53
+#: .\blog\templates\blog\comment.html:36
+#: .\blog\templates\blog\post_detail.html:58
 msgid "Commenter"
 msgstr "Comment"
 
-#: .\blog\templates\blog\index.html:8
+#: .\blog\templates\blog\index.html:11
 #, fuzzy
 msgid "Articles signés"
 msgstr "Posts Tagged with"
 
-#: .\blog\templates\blog\index.html:13
-#: .\showcase\templates\showcase\index.html:13
-msgid "Résultats de la recherche sur"
-msgstr ""
-
-#: .\blog\templates\blog\index.html:15
-#: .\showcase\templates\showcase\index.html:15
-msgid "Pas de correspondance avec"
-msgstr "No match for"
-
-#: .\blog\templates\blog\index.html:29
+#: .\blog\templates\blog\index.html:23 .\search\templates\search\index.html:26
 #: .\showcase\templates\showcase\index.html:29
 msgid "Voir Plus"
 msgstr "View More"
 
-#: .\blog\templates\blog\index.html:36
+#: .\blog\templates\blog\index.html:29
 msgid ""
 "Aucun article disponible pour l'instant. Merci de patienter. Il y en aura "
 "bientôt."
 msgstr "No post available for now. Please wait. There will be some soon."
 
-#: .\blog\templates\blog\post_detail.html:38
+#: .\blog\templates\blog\post_detail.html:43
 msgid "Pas de commentaire pour le moment"
 msgstr "No comment yet"
 
-#: .\blog\templates\blog\post_detail.html:59
+#: .\blog\templates\blog\post_detail.html:54
+msgid "Ajouter un commentaire"
+msgstr "Add a comment"
+
+#: .\blog\templates\blog\post_detail.html:64
 msgid "Articles similaires"
 msgstr "Similar Posts"
+
+#: .\search\templates\search\index.html:10
+#: .\showcase\templates\showcase\index.html:13
+msgid "Résultats de la recherche sur"
+msgstr "Search results for"
+
+#: .\search\templates\search\index.html:12
+#: .\showcase\templates\showcase\index.html:15
+msgid "Pas de correspondance avec"
+msgstr "No match for"
 
 #: .\showcase\templates\showcase\index.html:35
 msgid ""
 "Rien ici pour l'instant. Mais vous pouvez toujours voir mes petits projets "
 "sur"
-msgstr ""
-"Nothing there for now. But you can check my works "
-"on"
+msgstr "Nothing there for now. But you can check my works on"
 
 #: .\templates\404.html:8
 msgid ""
 "Cette page n'existe pas (encore). Il serait temps peut être que vous "
 "reveniez en bon lieu."
 msgstr ""
-"This page does not exist (yet). It might be time to come back "
-"to the right place."
+"This page does not exist (yet). It might be time to come back to the right "
+"place."
 
 #: .\templates\about.html:8
 msgid "Plus d'infos sur moi"
@@ -121,7 +123,7 @@ msgstr "Animes, Video Games, Music, Reading"
 msgid ""
 "Je suis étudiant en Physique-Chimie et programmeur autodidacte à temps "
 "partiel."
-msgstr ""
+msgstr "I am a Physics-Chemistry student and part-time self-taught programmer."
 
 #: .\templates\about.html:55
 msgid ""
@@ -130,12 +132,18 @@ msgid ""
 "mais je compte réaliser mon rêve de démystifier le jeu vidéo en Afrique en "
 "l'intégrant(pourquoi pas) au système éducatif."
 msgstr ""
+"I'm also interested in video games whether it's in design/development or "
+"just playing. I still have a lot to learn but I intend to realize my dream "
+"of demystifying the video game in Africa by integrating it (why not) into "
+"the educational system."
 
 #: .\templates\about.html:62
 msgid ""
 "En ce qui concerne mes atouts personnels, j'apprends et m'adapte très vite, "
 "et je travaille aussi bien seul qu'en équipe."
 msgstr ""
+"Concerning my personal strengths, I am a quick learner and "
+"adaptable, and I work both alone and in a team."
 
 #: .\templates\about.html:79
 msgid "Compétences"
@@ -145,19 +153,19 @@ msgstr "Competences"
 msgid "Outils et Frameworks"
 msgstr "Tools & Frameworks"
 
-#: .\templates\about.html:150
+#: .\templates\about.html:158
 msgid "Langages de Programation"
 msgstr "Programing Languages"
 
-#: .\templates\about.html:203
+#: .\templates\about.html:211
 msgid "Resumé"
 msgstr "Resume"
 
-#: .\templates\about.html:212 .\templates\about.html:238
+#: .\templates\about.html:220 .\templates\about.html:246
 msgid "Faculté des Sciences et Techniques |Université d'Abomey Calavi"
 msgstr "Faculty of Sciences and Techniques"
 
-#: .\templates\about.html:215
+#: .\templates\about.html:223
 msgid ""
 "L’Université d’Abomey-Calavi (UAC) est une institution académique publique "
 "qui a pour missions essentielles d’assurer la formation des cadres, de "
@@ -170,138 +178,166 @@ msgid ""
 "vigueur telle qu’elle résulte de la législation nationale et des accords "
 "internationaux."
 msgstr ""
+"The University of Abomey-Calavi (UAC) is a public academic institution whose "
+"essential missions are to train managers, contribute to scientific research "
+"and the development of the national economy. As such, it is open without "
+"condition of nationality, race, sex, religion or social origin to any person "
+"justifying the qualifications required for access, including the "
+"baccalaureate of the second cycle or a title recognized as equivalent. It "
+"confers degrees and awards diplomas in accordance with the regulations in "
+"force as set forth in national legislation and international agreements."
 
-#: .\templates\about.html:234
+#: .\templates\about.html:242
 msgid "Expérience Personnelle"
 msgstr "Personal Experience"
 
-#: .\templates\about.html:236
-msgid "Formation scolaire a la FAST"
-msgstr ""
+#: .\templates\about.html:244
+msgid "Formation Académique à la FAST"
+msgstr "Academic Education At FAST"
 
-#: .\templates\about.html:237
+#: .\templates\about.html:245
 msgid "Novembre 2020 - Maintenant"
 msgstr "November 2020 - Now"
 
-#: .\templates\about.html:240
-msgid "1ère année velidée en"
-msgstr ""
+#: .\templates\about.html:248
+msgid "1ère année validée en"
+msgstr "1st year validated on"
 
-#: .\templates\about.html:241
+#: .\templates\about.html:249
 msgid "2ème année en cours..."
-msgstr ""
-
-#: .\templates\about.html:242
-msgid ""
-"En vue de me spécialiser en Physique Quantique avec des vues en "
-"cristallographie."
-msgstr ""
+msgstr "2nd year in progress..."
 
 #: .\templates\about.html:250
+#, fuzzy
+#| msgid "En vue de me spécialiser en Physique Quantique"
+msgid "En vue de me spécialiser en Physique Quantique et en Astro-Physique"
+msgstr "I plan to specialize in Quantum Physics"
+
+#: .\templates\about.html:258
 msgid "Mars 2020 (appris en un un mois)"
 msgstr "March 2020 - Now"
 
-#: .\templates\about.html:253
-msgid "Bases, structures de données et programation système."
-msgstr ""
-
-#: .\templates\about.html:254
-msgid ""
-"Reproduction de quelques fonctions système et écriture d'une bibliothèque "
-"personnalisée."
-msgstr ""
-
 #: .\templates\about.html:261
+#, fuzzy
+#| msgid ""
+#| "Reproduction de quelques fonctions système et écriture d'une bibliothèque "
+#| "personnalisée."
+msgid ""
+"Bases, structures de données, reproduction de quelques fonctions système "
+"écriture d'une bibliothèque personnalisée."
+msgstr ""
+"Bases, data structures, reproduction of some system functionswriting a "
+"custom library."
+
+#: .\templates\about.html:272
 msgid "Programmation en Python"
 msgstr "Python Programming"
 
-#: .\templates\about.html:262
+#: .\templates\about.html:273
 msgid "Juillet 2020 - Maintenant (une semaine d'apprentissage)"
 msgstr "July 2020 - Now (Leant in on week)"
 
-#: .\templates\about.html:264
+#: .\templates\about.html:275
 msgid ""
 "Bases, principes orienté objet du langage, web (Flask, Django) graphique"
 msgstr ""
+"Basics, object-oriented language principles, web (Flask, Django) graphics"
 
-#: .\templates\about.html:267
+#: .\templates\about.html:278
 msgid ""
 "Résolution de problèmes diverses avec l'aide de scripts improvisés et "
 "adaptés aux situations."
 msgstr ""
+"Solving various problems with the help of improvised scripts"
+"adapted to any situation."
 
-#: .\templates\about.html:268
-msgid "Apprentisage de la 3D dans le but d'en faire un Minecraft-like."
-msgstr ""
-
-#: .\templates\about.html:275
+#: .\templates\about.html:285
 msgid "Développement de jeux vidéo"
 msgstr "Video Game development"
 
-#: .\templates\about.html:276
+#: .\templates\about.html:286
 #, fuzzy
 msgid "Mars 2021 - Maintenant"
 msgstr "November 2020 - Now"
 
-#: .\templates\about.html:278
+#: .\templates\about.html:289
 msgid ""
 "Quelques prototypes et clones de jeux connus (spécialement ceux d'Atari) en "
-"vue de maitriser les concepts du développement.</li>"
+"vue de maitriser les concepts du développement."
 msgstr ""
+"Prototypes and clones of known games (especially Atari's)"
+"in order to master the concepts of development."
 
-#: .\templates\about.html:283
-msgid "premier jeu (officiel) (inachevé)"
-msgstr "first (official) (unfinished) game"
+#: .\templates\about.html:295
+#, fuzzy
+#| msgid "premier jeu (officiel) (inachevé)"
+msgid "premier jeu (officiel) (achevé)"
+msgstr "first (official) (achieved) game"
 
-#: .\templates\about.html:284
+#: .\templates\about.html:296
 msgid ""
 "Capacité à créer n'importe quel type de jeu ou application en 2D avec Godot "
 "Engine."
 msgstr ""
+"Ability to create any type of 2D game or application with Godot Engine."
 
-#: .\templates\about.html:285
-msgid "Prise en main de GdScript, langage de base du moteur."
-msgstr ""
-
-#: .\templates\about.html:299
+#: .\templates\about.html:311
 msgid ""
 "Au cours de mes péripéties en tant que programmeur et développeur, j'ai eu à "
 "réaliser plusieurs projets, achevés ou non, qui m'ont permis de me "
 "perfectionner. Vous trouverez l'intégralité de ces projets dans l'onglet <a "
-"href=\"\">Vitrine</a>. Visitez-la pour pour en savoir plus."
+"href=/showcases/>Vitrine</a>. Visitez-la pour pour en savoir plus."
 msgstr ""
+"During my adventures as a programmer and developer, I had to "
+"realize several projects, completed or not, which allowed me to "
+"improve myself. You will find the entirety of these projects in the <a "
+"href=/showcases/>show</a> tab . Visit it to learn more."
 
-#: .\templates\base.html:57
+#: .\templates\base.html:86
 msgid "Accueil"
 msgstr "Home"
 
-#: .\templates\base.html:73
+#: .\templates\base.html:102
 msgid "Vitrine"
 msgstr "ShowCase"
 
-#: .\templates\base.html:77
+#: .\templates\base.html:106
 msgid "A Propos"
 msgstr "About Me"
 
-#: .\templates\base.html:92 .\templates\base.html:93 .\templates\base.html:94
+#: .\templates\base.html:119
+msgid "Langues"
+msgstr "Languages"
+
+#: .\templates\base.html:131 .\templates\base.html:132
+#: .\templates\base.html:133
 msgid "Me suivre sur"
 msgstr "Follow me on"
 
-#: .\templates\base.html:96 .\templates\base.html:97 .\templates\base.html:98
+#: .\templates\base.html:135 .\templates\base.html:136
+#: .\templates\base.html:137
 msgid "Me joindre sur"
 msgstr "Join me on"
 
-#: .\templates\base.html:99
+#: .\templates\base.html:138
 msgid "Envoyer un mail"
 msgstr "Send me a mail"
 
 #: .\templates\index.html:9
 msgid ""
-"Je m'appelle HANTAN Sèdégbé Kelly, globe-trotteur passionné par les "
-"Sciences, les jeux vidéos et tout ce qui a un trait avec la programation. "
-"Plus d'infos sur moi"
+"SixCode, mes aventures dans le code. Je m'appelle HANTAN Sèdégbé Kelly, "
+"officiellement étudiant en Physique-Chimie. Mais officieusement, je deviens "
+"un globe-trotteur passionné par les Sciences, les jeux vidéos et tout ce qui "
+"a un trait avec la programation. Plus d'infos sur moi"
 msgstr ""
+"SixCode, my adventures in code. My name is HANTAN Sèdégbé Kelly, "
+"officially a student in Physics and Chemistry. But unofficially, I am becoming "
+"a globetrotter with a passion for Science, video games and everything that "
+"has something to do with programming. More about me"
 
-#: .\templates\index.html:15
+#: .\templates\index.html:17
 msgid "ici"
 msgstr "here"
+
+#~ msgid "Bases, structures de données et programation système."
+#~ msgstr "Bases, data structures and system programming."

@@ -2,6 +2,9 @@
 {% load i18n %}
 {% block content %}
 
+
+{% get_current_language as LANGUAGE_CODE %}
+
 <div class="container">
 
     {% if tag %}
@@ -14,7 +17,7 @@
             {% for post in post_list %}
             <div class="card row mb-4 art animate__animated animate__zoomIn">
                 <div class="card-body">
-                    <h2 class="card-title">{{ post.title }}</h2>
+                    <h2 class="card-title"> {% if LANGUAGE_CODE == 'en'%} {{ post.en_title }} {% elif LANGUAGE_CODE == 'fr' %} {{ post.fr_title }} {% endif %} </h2>
                     <p class="card-text text-muted h6"> By {{ post.author }} | {{post.pub_date}} </p>
                     <p class="card-text">{{post.description|linebreaks }}</p>
                     <a href="{% url 'blog:post_detail' post.slug %}" class="btn btn-primary">{% translate "Voir Plus" %} &rarr;</a>

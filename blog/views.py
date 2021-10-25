@@ -1,4 +1,5 @@
 from django.shortcuts import get_list_or_404, get_object_or_404, render, redirect
+from django.utils.translation import get_language
 from .models import Post, Comment
 from .forms import CommentForm
 from taggit.models import Tag
@@ -12,7 +13,7 @@ def index(request, tag_slug=None):
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         posts = get_list_or_404(Post, status='published', tags=tag)
-    
+
     return render(request, 'blog/index.html', {'post_list':posts, 'tag':tag})
 
 def post_detail(request, post_name):
@@ -21,6 +22,7 @@ def post_detail(request, post_name):
     comments = post.comments.filter(active=True)
     new_comment = None
     comment_form = CommentForm()    
+    _context={}
     
     if request.method == 'POST':
         comment_form = CommentForm(data=request.POST)
@@ -34,7 +36,29 @@ def post_detail(request, post_name):
     similar_posts = Post.objects.filter(tags__in=post_tags_ids, status='published').exclude(slug=post.slug)
     similar_posts = similar_posts.annotate(same_tags=Count('tags')).order_by('-same_tags','-pub_date')[:6]
 
-    return render(request, 'blog/post_detail.html', {'post':post, 'comments': comments, 'comment_form':comment_form, 'similar_posts':similar_posts})
+    if request.LANGUAGE_CODE == 'en':
+        _context = {
+            'title': post.en_title,
+            'description': post.en_description,
+            'content': post.en_content,
+            'slug': post.slug,
+            'post':post,
+            'comments': comments,
+            'comment_form':comment_form,
+            'similar_posts':similar_posts,
+        }
+    elif request.LANGUAGE_CODE == 'fr':
+        _context = {
+            'title': post.fr_title,
+            'description': post.fr_description,
+            'content': post.fr_content,
+            'slug': post.slug,
+            'post':post,
+            'comments': comments,
+            'comment_form':comment_form,
+            'similar_posts':similar_posts,
+        }
+    return render(request=request, template_name='blog/post_detail.html', context=_context)
 
 def reply_page(request, slug, comment_id):
     if request.method == 'POST':
